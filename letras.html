@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Letras · Gon Abril</title>
+<meta name="description" content="Letras de las canciones de Gon Abril: Vértigo, 1000 Canciones, Luz Polar, Salvavidas, La Tormenta y más.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Work+Sans:wght@400;500;600&display=swap">
+<style>
+/* Web de banda clásica: foto a sangre arriba, bandas de color alternas (tinta / terracota / crema), lista de fechas en filas. Un solo look fijo, no depende del tema del visor. */
+:root{
+  --ink:#1E1A16; --ink-2:#2A241F; --terra:#A84E28; --terra-2:#93431F;
+  --cream:#EFE6CC; --paper:#F5EFDD; --gold:#D19A57; --khaki:#958A6C;
+  --line-dark:rgba(239,230,204,.18); --line-light:rgba(30,26,22,.16);
+  --serif:"Libre Caslon Text", Georgia, "Times New Roman", serif;
+  --sans:"Work Sans", "Helvetica Neue", Arial, sans-serif;
+  --maxw:1180px; color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;background:var(--ink)}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important}}
+body{background:var(--ink);color:var(--cream);font-family:var(--sans);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img{display:block;max-width:100%}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding-left:max(20px, env(safe-area-inset-left, 0px));padding-right:max(20px, env(safe-area-inset-right, 0px))}
+.label{font-family:var(--serif);text-transform:uppercase;letter-spacing:.22em;font-size:12px}
+h2{font-family:var(--serif);font-weight:400;text-transform:uppercase;letter-spacing:.14em;font-size:clamp(22px,2.6vw,30px);line-height:1.25;margin:0;text-wrap:balance}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--sans);font-weight:600;font-size:12px;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;padding:12px 20px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer;transition:background .15s,color .15s,border-color .15s;white-space:nowrap}
+.btn:hover{background:var(--cream);color:var(--ink);border-color:var(--cream)}
+.btn.fill{background:var(--cream);color:var(--ink);border-color:var(--cream)}
+.btn.fill:hover{background:var(--gold);border-color:var(--gold)}
+.btn.off{opacity:.55;pointer-events:none;border-style:dashed}
+
+/* NAV */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top, 0px);z-index:30;background:var(--ink)}
+.nav{position:fixed;top:env(safe-area-inset-top, 0px);left:0;right:0;z-index:20;transition:background .25s}
+.nav.solid{background:rgba(30,26,22,.94);backdrop-filter:blur(6px)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:16px}
+.nav .mini{height:30px;width:auto;opacity:0;transition:opacity .25s}
+.nav.solid .mini{opacity:1}
+.nav ul{display:flex;gap:38px;list-style:none;margin:0;padding:0;font-weight:700;font-size:14px;letter-spacing:.2em}
+.nav ul a{text-decoration:none;color:var(--cream);text-shadow:0 1px 10px rgba(0,0,0,.35)}
+.nav ul a:hover{color:var(--gold)}
+.icons{display:flex;gap:16px;align-items:center}
+.icons a{display:block;width:20px;height:20px;color:var(--cream)}
+.icons a:hover{color:var(--gold)}
+.icons svg{width:100%;height:100%;fill:currentColor}
+@media (max-width:900px){
+  .nav .wrap{justify-content:center}
+  .nav .mini,.nav .icons{display:none}
+  .nav ul{gap:clamp(12px,3.6vw,30px);font-size:clamp(10px,2.7vw,13px);letter-spacing:.12em}
+}
+
+/* HERO */
+.hero{position:relative;height:min(100svh,1000px);min-height:560px;overflow:hidden;background:#111}
+.hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:70% 30%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.6) 0%,rgba(0,0,0,.25) 9%,rgba(0,0,0,0) 20%,rgba(0,0,0,0) 55%,rgba(0,0,0,.55) 100%)}
+.hero .in{position:absolute;left:0;right:0;bottom:0;z-index:2}
+.hero .in .wrap{padding-block:0 clamp(36px,7vh,72px);display:flex;flex-direction:column;align-items:flex-start;gap:26px}
+.hero .logo{width:clamp(240px,40vw,560px);height:auto;filter:drop-shadow(0 2px 18px rgba(0,0,0,.25))}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.hero .cta .label{opacity:.9;margin-right:6px}
+@media (max-width:620px){.hero img.bg{object-position:78% 30%}}
+
+/* MÚSICA */
+.music{background:var(--ink);padding-block:clamp(64px,9vw,120px)}
+.music .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,6vw,90px);align-items:center}
+.music .cover{aspect-ratio:1;max-width:100%;width:100%;object-fit:cover;object-position:50% 50%}
+.music h2{margin:14px 0 6px}
+.music .title{font-family:var(--serif);font-style:italic;font-size:clamp(34px,4.6vw,58px);line-height:1.05;margin:6px 0 30px;text-wrap:balance}
+.music p{max-width:46ch;opacity:.85;margin:0 0 28px}
+.platforms{display:flex;flex-wrap:wrap;gap:10px}
+@media (max-width:760px){.music .grid{grid-template-columns:minmax(0,1fr)}}
+
+/* VÍDEO */
+.video{background:var(--ink);padding-block:0 clamp(64px,9vw,120px)}
+.vhead{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:18px;border-top:1px solid var(--line-dark);padding-top:28px}
+.vlink{text-decoration:none;opacity:.8}.vlink:hover{opacity:1;color:var(--gold)}
+.vt{opacity:.8;text-transform:none;letter-spacing:.04em;font-style:italic;font-size:15px}
+.player{position:relative;width:100%;max-width:100%;aspect-ratio:16/9;background:#000;overflow:hidden}
+.player img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.5}
+.player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+/* GIRA */
+.tour{background:var(--terra);padding-block:clamp(64px,9vw,120px)}
+.tour .head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:12px 30px;margin-bottom:38px}
+.tour .tname{font-style:italic;text-transform:none;letter-spacing:0;font-size:clamp(34px,5vw,62px);line-height:1.05}
+.tour-word{display:block;margin-top:10px;font-family:var(--sans);font-weight:600;letter-spacing:.5em;text-transform:uppercase;font-size:clamp(13px,1.4vw,16px)}
+.dates{list-style:none;margin:0;padding:0;border-top:1px solid rgba(239,230,204,.35)}
+.dates li{display:grid;grid-template-columns:150px minmax(0,1fr) minmax(0,1.1fr) auto;gap:18px;align-items:center;padding:20px 0;border-bottom:1px solid rgba(239,230,204,.35)}
+.dates .d{font-family:var(--serif);font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:15px;font-variant-numeric:tabular-nums}
+.dates .d span{display:block;font-weight:400;opacity:.8;font-size:12px;letter-spacing:.18em}
+.dates .c{font-family:var(--serif);text-transform:uppercase;letter-spacing:.14em;font-size:17px}
+.dates .v{opacity:.9}
+.dates .btn:hover{background:var(--ink);color:var(--cream);border-color:var(--ink)}
+.dates .btn.fill:hover{background:var(--ink);color:var(--cream);border-color:var(--ink)}
+@media (max-width:760px){
+  .dates li{grid-template-columns:96px minmax(0,1fr);gap:4px 16px;padding:18px 0}
+  .dates .d{grid-row:span 2}
+  .dates .v{grid-column:2}
+  .dates .t{grid-column:1 / -1;margin-top:12px}
+  .dates .t .btn{width:100%}
+}
+
+/* GALERÍA */
+.gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;background:var(--ink)}
+.gallery img{width:100%;height:100%;aspect-ratio:4/5;object-fit:cover}
+.gallery img.l{object-position:50% 30%}
+@media (max-width:620px){.gallery{grid-template-columns:minmax(0,1fr)}}
+
+/* BIO */
+.bio{background:var(--paper);color:var(--ink);padding-block:clamp(64px,9vw,120px)}
+.bio .grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(32px,6vw,90px);align-items:start}
+.bio img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.bio h2{margin:0 0 26px}
+.bio p{margin:0 0 18px;max-width:60ch;font-size:17px}
+.bio p.lead{font-family:var(--serif);font-size:clamp(21px,2.3vw,26px);line-height:1.45}
+.band{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:34px;padding-top:24px;border-top:1px solid var(--line-light)}
+.band b{display:block;font-family:var(--serif);font-weight:400;font-size:20px}
+.band span{font-size:13px;letter-spacing:.12em;text-transform:uppercase;opacity:.7}
+@media (max-width:760px){.bio .grid{grid-template-columns:minmax(0,1fr)}.bio img{aspect-ratio:1}}
+@media (max-width:420px){.band{grid-template-columns:minmax(0,1fr)}}
+
+/* CARTA */
+.letter{background:var(--ink-2);padding-block:clamp(64px,8vw,104px);text-align:center}
+.letter h2{margin:12px 0 14px}
+.letter p{max-width:52ch;margin:0 auto 30px;opacity:.85;font-family:var(--serif);font-style:italic;font-size:19px}
+.form{display:flex;gap:10px;max-width:560px;margin:0 auto;flex-wrap:wrap}
+.form input{flex:1 1 220px;min-width:0;font:inherit;font-size:16px;padding:12px 16px;background:transparent;border:1px solid rgba(239,230,204,.5);color:var(--cream)}
+.form input::placeholder{color:rgba(239,230,204,.55)}
+.form .btn{flex:0 0 auto}
+.msg{min-height:1.6em;margin:16px 0 0;font-size:15px}
+.fine{font-size:12px;opacity:.6;margin:6px 0 0}
+
+/* CONTACTO */
+.contact{background:var(--ink);padding-block:clamp(64px,8vw,104px)}
+.contact h2{margin-bottom:36px}
+.cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px;max-width:760px}
+.cols .label{opacity:.7;margin-bottom:10px;display:block}
+.cols .who{font-family:var(--serif);font-size:18px;margin:0 0 2px}
+.cols .mail{overflow-wrap:anywhere;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.copy{font:600 10px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;background:none;border:1px solid var(--line-dark);color:var(--cream);padding:5px 8px;cursor:pointer;opacity:.75}
+.copy:hover{opacity:1}
+.kit{display:flex;flex-wrap:wrap;gap:10px;margin-top:44px}
+@media (max-width:760px){.cols{grid-template-columns:minmax(0,1fr)}}
+
+footer{background:var(--ink);border-top:1px solid var(--line-dark)}
+footer .wrap{padding-block:34px 44px;display:flex;flex-wrap:wrap;gap:22px;justify-content:space-between;align-items:center}
+footer img{height:46px;width:auto}
+footer small{font-size:12px;opacity:.6;letter-spacing:.06em}
+
+/* LETRAS */
+body{margin:0}
+.nav{background:rgba(30,26,22,.96)}
+.nav .mini{opacity:1}
+.lhead{background:var(--ink);padding-block:calc(110px + env(safe-area-inset-top, 0px)) 40px;border-bottom:1px solid var(--line-dark)}
+.lhead h1{font-family:var(--serif);font-weight:400;font-style:italic;font-size:clamp(48px,8vw,96px);line-height:1;margin:12px 0 14px}
+.lhead p{max-width:52ch;opacity:.8;margin:0;font-size:17px}
+.lbody{background:var(--paper);color:var(--ink)}
+.lgrid{display:grid;grid-template-columns:220px minmax(0,1fr);gap:clamp(32px,6vw,96px);padding-block:56px 100px}
+.toc{position:sticky;top:calc(84px + env(safe-area-inset-top, 0px));align-self:start;list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.toc a{text-decoration:none;font-family:var(--serif);font-size:17px;opacity:.75}
+.toc a:hover{opacity:1;color:var(--terra)}
+.song{padding-block:12px 64px;border-bottom:1px solid var(--line-light);margin-bottom:56px;scroll-margin-top:calc(90px + env(safe-area-inset-top, 0px))}
+.song:last-child{border-bottom:0;margin-bottom:0}
+.song header{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:16px 24px;margin-bottom:26px}
+.song .st{font-style:italic;text-transform:none;letter-spacing:0;font-size:clamp(34px,4.4vw,52px);line-height:1.05}
+.song .btn{color:var(--ink)}
+.song .btn:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.lyr p{font-family:var(--serif);font-size:clamp(17px,1.6vw,19px);line-height:1.75;margin:0 0 1.4em}
+@media (max-width:760px){
+  .lgrid{grid-template-columns:minmax(0,1fr);padding-block:28px 72px}
+  .toc{position:static;display:flex;flex-wrap:wrap;gap:8px;padding-bottom:28px;border-bottom:1px solid var(--line-light)}
+  .toc a{font-size:14px;border:1px solid var(--line-light);padding:6px 10px;opacity:1}
+}
+</style>
+</head>
+<body>
+<nav class="nav solid" id="nav" aria-label="Principal">
+  <div class="wrap">
+    <a href="./" aria-label="Gon Abril, inicio"><img class="mini" src="img/logo-cream.png" alt="Gon Abril"></a>
+    <ul class="label">
+      <li><a href="./#musica">Música</a></li>
+      <li><a href="./#gira">Gira</a></li>
+      <li><a href="letras.html" aria-current="page" style="color:var(--gold)">Letras</a></li>
+      <li><a href="./#bio">Bio</a></li>
+      <li><a href="./#carta">Carta</a></li>
+      <li><a href="./#contacto">Contacto</a></li>
+    </ul>
+    <div class="icons"><a href="https://open.spotify.com/artist/33E9EiMUaBxMlQwamgda4W" target="_blank" rel="noopener" aria-label="Spotify"><svg viewBox="0 0 24 24"><path d="M12 1.5a10.5 10.5 0 1 0 0 21 10.5 10.5 0 0 0 0-21Zm4.8 15.2a.7.7 0 0 1-.96.23c-2.63-1.6-5.94-1.97-9.84-1.08a.7.7 0 1 1-.31-1.36c4.27-.98 7.93-.56 10.88 1.25.33.2.43.63.23.96Zm1.28-2.85a.87.87 0 0 1-1.2.29c-3-1.85-7.6-2.39-11.16-1.3a.87.87 0 1 1-.5-1.67c4.07-1.24 9.13-.64 12.58 1.48.41.25.54.79.28 1.2Zm.11-2.97C14.6 8.75 8.64 8.55 5.2 9.6a1.05 1.05 0 1 1-.61-2c3.95-1.2 10.53-.97 14.67 1.49a1.05 1.05 0 0 1-1.07 1.8Z"/></svg></a><a href="https://music.apple.com/es/artist/gon-abril/1330924367" target="_blank" rel="noopener" aria-label="Apple Music"><svg viewBox="0 0 24 24"><path d="M19 2.5v12.6a3.4 3.4 0 1 1-2-3.1V6.8l-8 1.8v9.1a3.4 3.4 0 1 1-2-3.1V5.4L19 2.5Z"/></svg></a><a href="https://www.instagram.com/gonabril_/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.58 0 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s0 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07s-3.58 0-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85C2.38 3.92 3.9 2.38 7.15 2.23 8.42 2.17 8.8 2.2 12 2.2Zm0 4.65a5.15 5.15 0 1 0 0 10.3 5.15 5.15 0 0 0 0-10.3Zm0 8.5a3.35 3.35 0 1 1 0-6.7 3.35 3.35 0 0 1 0 6.7Zm5.35-9.9a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4Z"/></svg></a><a href="https://www.tiktok.com/@gonabril_" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M16.6 2h-3.3v13.2a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .9.1V9a6.3 6.3 0 1 0 5.3 6.2V8.6a8 8 0 0 0 4.6 1.5V6.8A4.6 4.6 0 0 1 16.6 2Z"/></svg></a><a href="https://www.youtube.com/channel/UClpj_9uzT5Prn6tgmN2Qzfw" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1c.4-1.6.5-3.2.5-4.8s-.1-3.2-.5-4.8ZM9.7 15.1V8.9l5.8 3.1-5.8 3.1Z"/></svg></a></div>
+  </div>
+</nav>
+<main>
+  <header class="lhead"><div class="wrap">
+    <h1>Letras</h1>
+    <p>Todas las canciones, de la más nueva a la primera. Por si se te ha quedado una frase en la cabeza.</p>
+  </div></header>
+  <div class="lbody"><div class="wrap lgrid">
+    <ul class="toc"><li><a href="#vertigo">Vértigo</a></li><li><a href="#1000-canciones">1000 Canciones</a></li><li><a href="#luz-polar">Luz Polar</a></li><li><a href="#me-has-obligado-a-pensar">Me Has Obligado a Pensar</a></li><li><a href="#lo-que-importa-de-verdad">Lo que importa de verdad</a></li><li><a href="#2100">2100</a></li><li><a href="#da-igual">Da Igual</a></li><li><a href="#la-tormenta">La Tormenta</a></li><li><a href="#salvavidas">Salvavidas</a></li></ul>
+    <div>
+<article class="song" id="vertigo">
+  <header><h2 class="st">Vértigo</h2><a class="btn" href="https://open.spotify.com/track/7AmsOVCEcTp5cWhcES3JRE" target="_blank" rel="noopener">Escúchala en Spotify</a></header>
+  <div class="lyr">
+<p>No sé cuánto quedará de viaje<br>Pero sé con quien quiero desgastarme<br>Que esta vida se acelera<br>Y que solo no me llena</p>
+<p>Coge lo que quieras llevarte<br>Vámonos que no se haga tarde<br>Te acaricia el viento fresco<br>Qué bien y qué imperfecto</p>
+<p>Si gritas &quot;ven&quot;<br>Voy a volver</p>
+<p>Sintiendo el vértigo<br>Prende el fuego y que arda desde dentro<br>Grita a lo que siempre ha sido nuestro<br>Porque el tiempo nunca miente</p>
+<p>Simplemente desquiciante</p>
+<p>La certeza de lo que no ves<br>El tiempo es algo inestable<br>No mires hacia atrás por si nos ven<br>Por si nos ven caer (nos ven caer)</p>
+<p>Sintiendo el vértigo<br>Prende el fuego y que arda desde dentro<br>Grita a lo que siempre ha sido nuestro<br>Porque el tiempo nunca miente<br>Vértigo<br>Prende el fuego y que arda desde dentro<br>Grita a lo que siempre ha sido nuestro<br>Porque el tiempo nunca miente</p>
+  </div>
+</article>
+<article class="song" id="1000-canciones">
+  <header><h2 class="st">1000 Canciones</h2><a class="btn" href="https://open.spotify.com/track/3MZCfVvR05Z6J8A8rEYo0b" target="_blank" rel="noopener">Escúchala en Spotify</a></header>
+  <div class="lyr">
+<p>Ya te echo de menos<br>Y aún te has ido, no te has ido<br>Dime cómo hacemos<br>Que me he perdido<br>Y en ti me encuentro</p>
+<p>Voy a por ti<br>Hoy el día está bien raro<br>Y eso habla de ti</p>
+<p>Dicen que te escondes en los valles más profundos</p>
+<p>Quiero estar<br>En los días donde nadie quiera estar<br>Voy a hacer<br>Mil canciones por si no puedo volver<br>A tu lado una vez más<br>A tu lado una vez más</p>
+<p>Uhh</p>
+<p>Uhh</p>
+<p>Ya escuché tus miedos<br>No te preocupes tengo el remedio<br>Esa noche en julio<br>Siendo sinceros, cambió mi rumbo</p>
+<p>Mi primera canción, escuchaste mi voz<br>El recuerdo de estar en la playa los dos<br>Aún perdiendo el control<br>Y el destino esta vez nos marcó el corazón</p>
+<p>Dicen que te escondes en los valles más profundos</p>
+<p>Quiero estar<br>En los días donde nadie quiera estar<br>Voy a hacer<br>Mil canciones por si no puedo volver<br>Quiero estar<br>En los días donde nadie quiera estar<br>Voy a hacer<br>Mil canciones por si no puedo volver</p>
+<p>A tu lado una vez más<br>A tu lado una vez más</p>
+  </div>
+</article>
+<article class="song" id="luz-polar">
+  <header><h2 class="st">Luz Polar</h2><a class="btn" href="https://open.spotify.com/track/1hdVoCiSECsybqxRhS9wdY" target="_blank" rel="noopener">Escúchala en Spotify</a></header>
+  <div class="lyr">
+<p>Un golpe de suerte, una luz polar<br>Rompiendo los cristales<br>Ohhhh<br>Llevo tiempo descifrando<br>y no tengo ni una conclusión<br>Una sensación extraña<br>Me acompaña sin dejarme opción</p>
+<p>Veo lejos luz y sombras<br>No consigo enfocarte bien<br>No consigo enfocarte<br>Un golpe de suerte, una luz polar<br>Rompiendo los cristales</p>
+<p>Ohhhh<br>Polvo entre tus manos, vientos de huracán<br>Que no has llegado tarde<br>Ohhhh<br>¿Cómo no iba a ser probable?<br>Tu manía de decir que no<br>No perdiste facultades<br>Simplemente ganas de perdón<br>Veo lejos luz y sombras<br>No consigo enfocarte bien<br>Un golpe de suerte, una luz polar<br>Rompiendo los cristales<br>Ohhhh<br>Polvo entre tus manos, vientos de huracán<br>Que no has llegado tarde<br>Ohhh<br>Suelta todo el peso y déjate caer<br>Grita desde dentro, ya no estás lejos<br>Un golpe de suerte, una luz polar<br>Rompiendo los cristales<br>Ohhhh<br>Polvo entre tus manos, vientos de huracán<br>Que no has llegado tarde<br>Ohhhh</p>
+  </div>
+</article>
+<article class="song" id="me-has-obligado-a-pensar">
+  <header><h2 class="st">Me Has Obligado a Pensar</h2><a class="btn" href="https://open.spotify.com/track/6n5wuxBHwJiZlhxTAmZL6u" target="_blank" rel="noopener">Escúchala en Spotify</a></header>
+  <div class="lyr">
+<p>Estoy completamente ahogado<br>Se me ha olvidado respirar<br>Estoy llegando al fondo y veo<br>Que todo te da igual</p>
+<p>Me miras pero ya no hablamos<br>Lo raro se ha vuelto normal<br>Me mientes y yo me distraigo<br>Con ruido sin pensar</p>
+<p>Creo que está bien y luego no lo está<br>Lo estás rompiendo todo</p>
+<p>Me has obligado a pensar<br>Que no era para tanto<br>Que no era necesario<br>Decirnos la verdad<br>Tú tienes el poder<br>De hacernos tanto daño<br>Que nunca volveré<br>A ser lo que juramos</p>
+<p>Te juro que no volverá a pasar<br>El miedo nunca me ha dejado hablar<br>La gente no conoce lo que haces en silencio</p>
+<p>Las dudas no las dejo ni al azar<br>Y no tiemblo, no tiemblo<br>si me quieres enterrar</p>
+<p>Creo que está bien y luego no lo está<br>Lo estás rompiendo todo</p>
+<p>Me has obligado a pensar<br>Que no era para tanto<br>Que no era necesario<br>Decirnos la verdad<br>Tú tienes el poder<br>De hacernos tanto daño<br>Que nunca volveré<br>A ser lo que juramos</p>
+  </div>
+</article>
+<article class="song" id="lo-que-importa-de-verdad">
+  <header><h2 class="st">Lo que importa de verdad</h2><a class="btn" href="https://open.spotify.com/track/0OeSJ6PYKz774iNr6y48aq" target="_blank" rel="noopener">Escúchala en Spotify</a></header>
+  <div class="lyr">
+<p>Has estado cerca</p>
+<p>De donde nadie ha estado<br>Y a dónde nadie llega</p>
+<p>Cuidas cada parte<br>De las que me quedan<br>Después de tanta guerra</p>
+<p>Ojalá nunca te vayas<br>Ojalá siempre te quedes<br>Sólo de lunes a domingo<br>Todos los meses</p>
+<p>Y yo, que he estudiado el cuerpo humano<br>No le encuentro explicación<br>Lo que me pasa aquí en el pecho<br>Cuando me hablas del amor<br>Y lo que importa de verdad</p>
+<p>Sabía que no era un lugar<br>Sabía que era mucho más<br>Decías que todo lo cambia<br>A veces tienes que volver</p>
+<p>Y a veces es para entender<br>Todo lo que te da la vida</p>
+<p>Y ojalá nunca te vayas<br>Ojalá siempre te quedes<br>Sólo de lunes a domingo<br>Todos los meses</p>
+<p>Y yo, que he estudiado el cuerpo humano<br>No le encuentro explicación<br>Lo que me pasa aquí en el pecho<br>Cuando me hablas del amor<br>Y lo que importa de verdad</p>
+  </div>
+</article>
+<article class="song" id="2100">
+  <header><h2 class="st">2100</h2><a class="btn" href="https://open.spotify.com/track/534YWczbRU679oaRSIHdDw" target="_blank" rel="noopener">Escúchala en Spotify</a></header>
+  <div class="lyr">
+<p>Se han empezado a romper<br>Todas mis expectativas<br>Las que cumpliría<br>En el 2100</p>
+<p>Tú lo sabes, yo lo sé<br>Sin embargo no sabías<br>Que esta mierda pasaría<br>Que alguien no querría<br>Sí quería<br>Que salga todo bien</p>
+<p>Vamos a hacer lo que nos gustaría<br>Vamos a hacerlo aunque no haya salida<br>Vamos a hacerlo porque nadie puede</p>
+<p>No, nadie te puede decir<br>Lo que está bien para ti<br>Nunca te olvides de lo que produce<br>Esta sensación de vivir<br>Nadie ha tenido el valor<br>Para llegar hasta aquí<br>Nunca te olvides lo que te produce<br>Esta sensación de vivir</p>
+<p>Corre a quemar los barcos<br>Es el momento exacto<br>Revienta cada parte<br>De lo que te ha reventado a ti</p>
+<p>Suena raro, ya lo sé<br>Pero el plan tiene su intriga<br>¿A quién llamarías si algo no va bien?</p>
+<p>Vamos a hacer lo que nos gustaría<br>Vamos a hacerlo aunque no haya salida<br>Vamos a hacerlo porque nadie puede</p>
+<p>No, nadie te puede decir<br>Lo que está bien para ti<br>Nunca te olvides de lo que produce<br>Esta sensación de vivir<br>Nadie ha tenido el valor<br>Para llegar hasta aquí<br>Nunca te olvides lo que te produce<br>Esta sensación de vivir</p>
+  </div>
+</article>
+<article class="song" id="da-igual">
+  <header><h2 class="st">Da Igual</h2><a class="btn" href="https://open.spotify.com/track/2SSDfHVmBUfAnTarnfo9y7" target="_blank" rel="noopener">Escúchala en Spotify</a></header>
+  <div class="lyr">
+<p>Tienes una necesidad brutal<br>De caer genial al resto<br>De sentirte 1 de ellos</p>
+<p>Eres solo 1 copia de alguien más<br>Dispuesto a colapsar<br>Por 1 intento más</p>
+<p>Y no te has dado cuenta<br>Mira todo lo de atrás<br>¿¿Ves que vale mucho más??</p>
+<p>Baila que todo el resto da igual<br>Tú no les tienes que impresionar<br>Olvídate de todo, tú<br>Olvídate de todo<br>Para un poco el tiempo<br>Baila conmigo y déjate de cuentos</p>
+<p>Si vas a hacerlo que sea en serio<br>No te confundas al verte en medio<br>De todo el caos abrumado</p>
+<p>Lo de las redes me tiene mal y no<br>No quiero ver cómo camufláis el no<br>Ser libres de hacer la verdad</p>
+<p>Y no te has dado cuenta<br>Mira todo lo de atrás<br>¿Ves que vale mucho más?</p>
+<p>Baila que todo el resto da igual<br>Tú no les tienes que impresionar<br>Olvídate de todo, tú<br>Olvídate de todo<br>Para un poco el tiempo<br>Baila conmigo y déjate de cuentos<br>Baila conmigo y déjate de cuentos</p>
+<p>No te creas lo que dicen no es cierto<br>Ahí afuera hay mucha gente mintiendo<br>Llámame cuando te quieras esconder<br>A veces cuesta atravesar el desierto<br>He sentido esa ansiedad en el pecho</p>
+<p>Llámame si te quieres esconder<br>Llámame que yo aquí sigo despierto<br>Llámame si te quieres esconder</p>
+  </div>
+</article>
+<article class="song" id="la-tormenta">
+  <header><h2 class="st">La Tormenta</h2><a class="btn" href="https://open.spotify.com/track/2E96tv9L3arB8oU5SMCRMt" target="_blank" rel="noopener">Escúchala en Spotify</a></header>
+  <div class="lyr">
+<p>He venido desde lejos<br>Para escuchar la calma<br>Ahora estoy a 1000km<br>De mi vieja casa<br>Y no, no voy a parar<br>No va a ser un drama</p>
+<p>Todo el mundo se ha parado<br>Lo echaba tanto en falta<br>Cuando empiece la tormenta<br>Voy a salir de cara ¡y no!<br>No guardo ni un rencor<br>Ahora solo veo la distancia</p>
+<p>Bienvenido a ese momento<br>Donde todo cambia<br>Todo lo que antes pensabas<br>Ha explotado en llamas, ¡no!<br>Recuerda esta canción<br>Cuando quieras llorar<br>Y te hayas quedado sin balas<br>Bailaré con el reflejo<br>De lo que nos separa<br>Has brindado por promesas<br>Que hoy te salen caras</p>
+<p>Y no, no guardo ni un rencor<br>Ahora solo queda la distancia</p>
+<p>Bienvenido a ese momento<br>Donde todo cambia<br>Todo lo que antes pensabas<br>Ha explotado en llamas, ¡no!<br>Recuerda esta canción<br>Cuando quieras llorar<br>Y te hayas quedado sin balas</p>
+<p>Recuerda los momentos<br>Recuerda los intentos<br>Recuerda dónde estás<br>Y dónde estabas</p>
+<p>Bienvenido a ese momento<br>Donde todo cambia<br>Todo lo que antes pensabas<br>Ha explotado en llamas, ¡no!<br>Recuerda esta canción<br>Cuando quieras llorar<br>Y te hayas quedado sin balas</p>
+  </div>
+</article>
+<article class="song" id="salvavidas">
+  <header><h2 class="st">Salvavidas</h2><a class="btn" href="https://open.spotify.com/track/1TditDtJGM4wp53arjyw9t" target="_blank" rel="noopener">Escúchala en Spotify</a></header>
+  <div class="lyr">
+<p>24/7 nunca dejo de pensar<br>Lo que puede ser pero que nunca va a pasar<br>Sé que eso no es bueno pero no veo un final<br>No me gusta ver que todo avanza y sigo igual<br>Yo sigo igual</p>
+<p>Sé que ahora yo no la puedo ver<br>Sé que hay una salida<br>Déjame ver que todo va bien<br>Que eres mi salvavidas<br>Mi salvavidas</p>
+<p>Siento que me sostienes<br>Cuando el mar pega fuerte<br>Cuando me falta todo, tú<br>Abrázame más fuerte<br>Que tengo frío y llueve<br>En esta noche, por favor<br>Abrázame, abrázame</p>
+<p>Curas lo malo, calmas mi llanto<br>Me dejas ser sincero<br>Gracias por tanto, te debo tanto<br>Que no sé cómo hacerlo<br>Tú dime cómo hacerlo</p>
+<p>Y sé que ahora yo no la puedo ver<br>Sé que hay una salida<br>Déjame ver que todo va bien<br>Que eres mi salvavidas<br>Mi salvavidas</p>
+<p>Siento que me sostienes<br>Cuando el mar pega fuerte<br>Cuando me falta todo, tú<br>Abrázame más fuerte<br>Que tengo frío y llueve<br>En esta noche, por favor<br>Abrázame, abrázame</p>
+  </div>
+</article>
+    </div>
+  </div></div>
+</main>
+<footer><div class="wrap"><img src="img/logo-cream.png" alt="Gon Abril"><div class="icons"><a href="https://open.spotify.com/artist/33E9EiMUaBxMlQwamgda4W" target="_blank" rel="noopener" aria-label="Spotify"><svg viewBox="0 0 24 24"><path d="M12 1.5a10.5 10.5 0 1 0 0 21 10.5 10.5 0 0 0 0-21Zm4.8 15.2a.7.7 0 0 1-.96.23c-2.63-1.6-5.94-1.97-9.84-1.08a.7.7 0 1 1-.31-1.36c4.27-.98 7.93-.56 10.88 1.25.33.2.43.63.23.96Zm1.28-2.85a.87.87 0 0 1-1.2.29c-3-1.85-7.6-2.39-11.16-1.3a.87.87 0 1 1-.5-1.67c4.07-1.24 9.13-.64 12.58 1.48.41.25.54.79.28 1.2Zm.11-2.97C14.6 8.75 8.64 8.55 5.2 9.6a1.05 1.05 0 1 1-.61-2c3.95-1.2 10.53-.97 14.67 1.49a1.05 1.05 0 0 1-1.07 1.8Z"/></svg></a><a href="https://music.apple.com/es/artist/gon-abril/1330924367" target="_blank" rel="noopener" aria-label="Apple Music"><svg viewBox="0 0 24 24"><path d="M19 2.5v12.6a3.4 3.4 0 1 1-2-3.1V6.8l-8 1.8v9.1a3.4 3.4 0 1 1-2-3.1V5.4L19 2.5Z"/></svg></a><a href="https://www.instagram.com/gonabril_/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.58 0 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s0 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07s-3.58 0-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85C2.38 3.92 3.9 2.38 7.15 2.23 8.42 2.17 8.8 2.2 12 2.2Zm0 4.65a5.15 5.15 0 1 0 0 10.3 5.15 5.15 0 0 0 0-10.3Zm0 8.5a3.35 3.35 0 1 1 0-6.7 3.35 3.35 0 0 1 0 6.7Zm5.35-9.9a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4Z"/></svg></a><a href="https://www.tiktok.com/@gonabril_" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M16.6 2h-3.3v13.2a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .9.1V9a6.3 6.3 0 1 0 5.3 6.2V8.6a8 8 0 0 0 4.6 1.5V6.8A4.6 4.6 0 0 1 16.6 2Z"/></svg></a><a href="https://www.youtube.com/channel/UClpj_9uzT5Prn6tgmN2Qzfw" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1c.4-1.6.5-3.2.5-4.8s-.1-3.2-.5-4.8ZM9.7 15.1V8.9l5.8 3.1-5.8 3.1Z"/></svg></a></div><small>© 2026 Gon Abril</small></div></footer>
+<script>
+const nav=document.getElementById("nav");
+</script>
+</body>
+</html>
